@@ -36,7 +36,7 @@ Dynamic programming based retrieval path plannig algorithm and graph reinforceme
 <br>
 
 #### 1.2 Buffer-aware path planning algorithm
-<img src="figure/BAP.png"/ width="50%">>
+<img src="figure/BAP.png"/ width="50%">
 <br>
 
 ### 2️⃣ Markov decision process
