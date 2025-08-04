@@ -33,25 +33,36 @@ Dynamic programming based retrieval path plannig algorithm and graph reinforceme
 ### 1️⃣ Retrieval algorithm
 #### 1.1 Minimum blocking path plannig algorithm
 <p align="center">
-<img src="figure/MBP.png" width="60%">
+<img src="figure/MBP.png" width="65%">
 
 <br>
 
 #### 1.2 Buffer-aware path planning algorithm
 <p align="center">
-<img src="figure/BAP.png" width="60%">
+<img src="figure/BAP.png" width="65%">
 <br>
 
-### 2️⃣ Markov decision process
+### 2️⃣ Placement algorithm
 
-#### 2.1 State
+#### 2.1 Simulated Greedy Placement
 - State composed of unscheduled blocks and transporters
     - **edge attributed graph**: compact and effective representation of block transportation statue
         - nodes representing location which contain current transporter information
         - edges representing blocks with origin and destination by disjunctive edge
     - **Crystal graph convolutional neural network**: graph neural network that suitable for encoding edge attributed graph
 
-#### 2.2 Action
+<br>
+
+### 3️⃣ Graph reinforcement learning
+
+#### 3.1 State
+- State composed of unscheduled blocks and transporters
+    - **edge attributed graph**: compact and effective representation of block transportation statue
+        - nodes representing location which contain current transporter information
+        - edges representing blocks with origin and destination by disjunctive edge
+    - **Crystal graph convolutional neural network**: graph neural network that suitable for encoding edge attributed graph
+
+#### 3.2 Action
 - a combination of the vessel and quay-wall (machine assignment and job sequencing)
     - **candidate vessels**
         - newly launched vessels from the docks
@@ -62,18 +73,12 @@ Dynamic programming based retrieval path plannig algorithm and graph reinforceme
         - empty quay walls
         - occupied quay walls with preemption allowed
 
-#### 2.3 Reward
+#### 3.3 Reward
 - minimization of the total cost in the post-stage outfitting process
 - a sum of three cost-related rewards
     - **penalty cost**: the penalty cost for the delay in the delivery of vessels
     - **moving cost**: the cost of moving the vessels
     - **loss cost**: the additional processing cost
-
-<br>
-
-### 3️⃣ DES-based learning environment
-- DES model of the post-stage outfitting process in shipyards
-- state transition that takes the action of the agent as the input and calculates the next state and reward.
 
 <br>
 
