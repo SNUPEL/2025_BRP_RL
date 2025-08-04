@@ -78,9 +78,9 @@ We propose a **retrieval path planning and placement decision algorithm** aimed 
         - Compute each cell value with softmax normalization
 
 ##### 3.2.3 Reward
-- minimization of the total cost in the post-stage outfitting process
-- a sum of three cost-related rewards
-    - **penalty cost**: the penalty cost for the delay in the delivery of vessels
+- The objective is to minimize total block relocations, which are evaluated through simulation.
+- A proxy reward is designed using a reward decomposition method:
+    - **penalty cost**: A penalty is assigned to a placement action if the placed block was previously relocated
 <br>
 
 ##### 3.2.4 Network Structure
