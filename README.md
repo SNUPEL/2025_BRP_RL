@@ -17,11 +17,10 @@
 <br>
 
 ## Project Introduction
-We propose retrieval path planning and placement decision algorithm for minimizing the relocation of interference block
-<br>
-Effective operation of storage yard is major points in shipyard logistics . <br>
-Planar transportation constraint of hull-block incurs the interference block relocation in retrieval path. <br>
-Dynamic programming based retrieval path plannig algorithm and graph reinforcement learning based placement algorithm. <br>
+We propose a retrieval path planning and placement decision algorithm aimed at minimizing the relocation of interference blocks.<br>
+Effective operation of the storage yard is a critical aspect of shipyard logistics.<br>
+Due to planar transportation constraints of hull blocks, interference block relocation often occurs during retrieval. <br>
+To address this, we develop a retrieval path planning algorithm based on dynamic programming and a placement algorithm based on graph reinforcement learning.<br>
 
 <p align="center">
 <img src="figure/Problem_description.png" width="80%">
