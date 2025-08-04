@@ -23,28 +23,37 @@ Effective operation of storage yard is major points in shipyard logistics . <br>
 Planar transportation constraint of hull-block incurs the interference block relocation in retrieval path. <br>
 Dynamic programming based retrieval path plannig algorithm and graph reinforcement learning based placement algorithm. <br>
 
-
+<p align="center">
 <img src="figure/Problem_description.png" width="80%">
 <br>
 
 
-## Main Function
+## Main
 
-### 1️⃣ Retrieval algorithm
+### 1️⃣ Retrieval process
 #### 1.1 Minimum blocking path plannig algorithm
 <p align="center">
 <img src="figure/MBP.png" width="65%">
 
 <br>
 
-#### 1.2 Buffer-aware path planning algorithm
+
+### 2️⃣ Retrieval algorithm
+#### 2.1 Minimum blocking path plannig algorithm
+<p align="center">
+<img src="figure/MBP.png" width="65%">
+
+<br>
+
+#### 2.2 Buffer-aware path planning algorithm
 <p align="center">
 <img src="figure/BAP.png" width="65%">
 <br>
 
-### 2️⃣ Placement algorithm
 
-#### 2.1 Simulated Greedy Placement
+### 3️⃣ Placement algorithm
+
+#### 3.1 Simulated Greedy Placement
 - State composed of unscheduled blocks and transporters
     - **edge attributed graph**: compact and effective representation of block transportation statue
         - nodes representing location which contain current transporter information
@@ -53,16 +62,16 @@ Dynamic programming based retrieval path plannig algorithm and graph reinforceme
 
 <br>
 
-### 3️⃣ Graph reinforcement learning
+#### 3.2  Graph reinforcement learning
 
-#### 3.1 State
+##### 3.2.1 State
 - State composed of unscheduled blocks and transporters
     - **edge attributed graph**: compact and effective representation of block transportation statue
         - nodes representing location which contain current transporter information
         - edges representing blocks with origin and destination by disjunctive edge
     - **Crystal graph convolutional neural network**: graph neural network that suitable for encoding edge attributed graph
 
-#### 3.2 Action
+##### 3.2.2 Action
 - a combination of the vessel and quay-wall (machine assignment and job sequencing)
     - **candidate vessels**
         - newly launched vessels from the docks
@@ -73,7 +82,7 @@ Dynamic programming based retrieval path plannig algorithm and graph reinforceme
         - empty quay walls
         - occupied quay walls with preemption allowed
 
-#### 3.3 Reward
+##### 3.2.3 Reward
 - minimization of the total cost in the post-stage outfitting process
 - a sum of three cost-related rewards
     - **penalty cost**: the penalty cost for the delay in the delivery of vessels
@@ -82,8 +91,7 @@ Dynamic programming based retrieval path plannig algorithm and graph reinforceme
 
 <br>
 
-### 4️⃣ Scheduling agent with PPO algorithm
-#### 4.1 Network Structure
+##### 3.2.4 Network Structure
 <img src="figure/Placement network.png"/>
 
 
