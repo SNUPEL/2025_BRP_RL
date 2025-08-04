@@ -34,9 +34,8 @@ We propose a **retrieval path planning and placement decision algorithm** aimed 
 #### 1.1 Block retrieval process with blocking item relocation
 <p align="center">
 <img src="figure/Retrieval_process.png">
-
 <br>
-
+<br>
 
 ### 2️⃣ Retrieval algorithm
 
@@ -51,6 +50,7 @@ We propose a **retrieval path planning and placement decision algorithm** aimed 
 <img src="figure/BAP.png" width="65%">
 <br>
 
+<br>
 
 ### 3️⃣ Placement algorithm
 
