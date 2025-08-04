@@ -8,21 +8,21 @@
 
 ## Project Overview
 - **Project**
-    - Block transportation scheduling algorithm with graph reinforcement learning
+    - Retrieval and placement optimization in shipyard hull-block storage yard
 - **Superviser**
     - Prof. Jong Hun Woo (SNU, KOREA)
-- **Data provider**
-    - HD Korea Shipbuilding & Offshore Engineering (KSOE)
 - **Paper**
-    - [Crystal Graph Convolutional Neural Network-Based Reinforcement Learning for Adaptive Shipyard Block Transportation Scheduling](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5183857)
-    - EAAI (revision being proceeding)
+    - Optimization of Hull-block Placement and Retrieval Path Planning for Congested Planar Storage in Shipyard
+    - Transportation part E (Preparing submitting)
 <br>
 
 ## Project Introduction
-We develop a block transportation scheduling algorithm for shipyards 
+We propose retrieval path planning and placement decision algorithm for minimizing the relocation of interference block
 <br>
-The Block Transportation Scheduling Problem (BTSP) is a key logistics challenge in shipyards. <br>
-Our goal is to develop a **scalable scheduling algorithm capable of dynamic decision-making**. <br>
+Effective operation of storage yard is major points in shipyard logistics . <br>
+Planar transportation constraint of hull-block incurs the interference block relocation in retrieval path. <br>
+Planar transportation constraint of hull-block incurs the interference block relocation in retrieval path. <br>
+
 
 <img src="figure/TP_problem_info.png"/>
 <br>
@@ -30,7 +30,7 @@ Our goal is to develop a **scalable scheduling algorithm capable of dynamic deci
 
 ## Main Function
 
-### 1️⃣ Overall framework
+### 1️⃣ Retrieval algorithm
 <img src="figure/TP_algorithm_framework.png"/>
 
 <br>
