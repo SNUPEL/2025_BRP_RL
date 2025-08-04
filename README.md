@@ -24,7 +24,7 @@ Planar transportation constraint of hull-block incurs the interference block rel
 Dynamic programming based retrieval path plannig algorithm and graph reinforcement learning based placement algorithm. <br>
 
 
-<img src="figure/Problem_description.png"/>
+<img src="figure/Problem_description.png" width="80%">
 <br>
 
 
