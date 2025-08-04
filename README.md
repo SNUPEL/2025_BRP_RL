@@ -34,6 +34,7 @@ Dynamic programming based retrieval path plannig algorithm and graph reinforceme
 #### 1.1 Minimum blocking path plannig algorithm
 <img src="figure/MBP.png"/>
 <br>
+
 #### 1.2 Buffer-aware path planning algorithm
 <img src="figure/BAP.png"/>
 <br>
@@ -75,7 +76,7 @@ Dynamic programming based retrieval path plannig algorithm and graph reinforceme
 
 ### 4️⃣ Scheduling agent with PPO algorithm
 #### 4.1 Network Structure
-<img src="figure/TP_network_structure.png"/>
+<img src="figure/Placement_network.png"/>
 
 
 - **Representation module**
