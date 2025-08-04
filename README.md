@@ -34,11 +34,12 @@ Dynamic programming based retrieval path plannig algorithm and graph reinforceme
 #### 1.1 Minimum blocking path plannig algorithm
 <p align="center">
 <img src="figure/MBP.png" width="60%">
-<\p>
+
 <br>
 
 #### 1.2 Buffer-aware path planning algorithm
-<img src="figure/BAP.png" width="50%">
+<p align="center">
+<img src="figure/BAP.png" width="60%">
 <br>
 
 ### 2️⃣ Markov decision process
