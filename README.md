@@ -60,7 +60,6 @@ We propose a **retrieval path planning and placement decision algorithm** aimed 
         - nodes representing location which contain current transporter information
         - edges representing blocks with origin and destination by disjunctive edge
     - **Crystal graph convolutional neural network**: graph neural network that suitable for encoding edge attributed graph
-<br>
 
 #### 3.2  Graph reinforcement learning
 
@@ -86,6 +85,7 @@ We propose a **retrieval path planning and placement decision algorithm** aimed 
 
 ##### 3.2.4 Network Structure
 <img src="figure/Placement network.png"/>
+
 - **Representation module**
     - Two types of latent representation are extracted from the heterogeneous graphs and auxiliary matrix, respectively
     - For heterogeneous graphs, the embedding vectors of nodes are generated using the relational information between nodes
