@@ -214,13 +214,13 @@ class Stockyard_simulation:
             total_block_encoded = self.block_encoding(block_concat, self.TP_type)
             eval_set.append([grid.copy(), total_block.copy(), total_block_encoded.copy()])
 
-        '''
+        
         for ev_set in eval_set:
             for _____ in range(batch_num):
                 total_rearrangement, grids, blocks, actions, rewards, dones, masks, probs, block_lefts = self.Run_simulation(
                     simulation_day, lookahead_num, ASR_1, ev_set[0].copy(), ev_set[1].copy(), ev_set[2].copy())
                 ave_rearrangement += total_rearrangement
-        print('ASR ', ave_rearrangement / pr_num / batch_num)
+        print('SGP ', ave_rearrangement / pr_num / batch_num)
         ave_rearrangement = 0
         for ev_set in eval_set:
             for _____ in range(batch_num):
@@ -235,7 +235,7 @@ class Stockyard_simulation:
                     simulation_day, lookahead_num, BLF_1, ev_set[0].copy(), ev_set[1].copy(), ev_set[2].copy())
                 ave_rearrangement += total_rearrangement
         print('BLF', ave_rearrangement / pr_num / batch_num)
-        '''
+        
         # Generate evaluation set for validation
 
         # Start training loop
