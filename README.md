@@ -34,8 +34,8 @@ Dynamic programming based retrieval path plannig algorithm and graph reinforceme
 #### 1.1 Block retrieval process with blocking item relocation
 <p align="center">
 <img src="figure/Retrieval_process.png">
-<br>
 
+<br>
 ### 2️⃣ Retrieval algorithm
 #### 2.1 Minimum blocking path plannig algorithm
 <p align="center">
@@ -57,7 +57,6 @@ Dynamic programming based retrieval path plannig algorithm and graph reinforceme
         - nodes representing location which contain current transporter information
         - edges representing blocks with origin and destination by disjunctive edge
     - **Crystal graph convolutional neural network**: graph neural network that suitable for encoding edge attributed graph
-
 <br>
 
 #### 3.2  Graph reinforcement learning
