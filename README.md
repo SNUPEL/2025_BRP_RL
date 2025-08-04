@@ -21,18 +21,21 @@ We propose retrieval path planning and placement decision algorithm for minimizi
 <br>
 Effective operation of storage yard is major points in shipyard logistics . <br>
 Planar transportation constraint of hull-block incurs the interference block relocation in retrieval path. <br>
-Planar transportation constraint of hull-block incurs the interference block relocation in retrieval path. <br>
+Dynamic programming based retrieval path plannig algorithm and graph reinforcement learning based placement algorithm. <br>
 
 
-<img src="figure/TP_problem_info.png"/>
+<img src="figure/Problem_description.png"/>
 <br>
 
 
 ## Main Function
 
 ### 1️⃣ Retrieval algorithm
-<img src="figure/TP_algorithm_framework.png"/>
-
+#### 1.1 Minimum blocking path plannig algorithm
+<img src="figure/MBP.png"/>
+<br>
+#### 1.2 Buffer-aware path planning algorithm
+<img src="figure/BAP.png"/>
 <br>
 
 ### 2️⃣ Markov decision process
