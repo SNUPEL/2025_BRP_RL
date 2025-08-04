@@ -76,7 +76,7 @@ Dynamic programming based retrieval path plannig algorithm and graph reinforceme
 
 ### 4️⃣ Scheduling agent with PPO algorithm
 #### 4.1 Network Structure
-<img src="figure/Placement_network.png"/>
+<img src="figure/Placement network.png"/>
 
 
 - **Representation module**
