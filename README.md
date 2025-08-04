@@ -33,7 +33,7 @@ Dynamic programming based retrieval path plannig algorithm and graph reinforceme
 ### 1️⃣ Retrieval process
 #### 1.1 Minimum blocking path plannig algorithm
 <p align="center">
-<img src="figure/Retrieval_process.png" width="80%">
+<img src="figure/Retrieval_process.png">
 
 <br>
 
@@ -41,13 +41,13 @@ Dynamic programming based retrieval path plannig algorithm and graph reinforceme
 ### 2️⃣ Retrieval algorithm
 #### 2.1 Minimum blocking path plannig algorithm
 <p align="center">
-<img src="figure/MBP.png" width="65%">
+<img src="figure/MBP.png" width="80%">
 
 <br>
 
 #### 2.2 Buffer-aware path planning algorithm
 <p align="center">
-<img src="figure/BAP.png" width="65%">
+<img src="figure/BAP.png" width="80%">
 <br>
 
 
