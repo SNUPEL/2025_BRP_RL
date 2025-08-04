@@ -30,6 +30,7 @@ We propose a **retrieval path planning and placement decision algorithm** aimed 
 ## Main
 
 ### 1️⃣ Retrieval process
+
 #### 1.1 Block retrieval process with blocking item relocation
 <p align="center">
 <img src="figure/Retrieval_process.png">
@@ -38,6 +39,7 @@ We propose a **retrieval path planning and placement decision algorithm** aimed 
 
 
 ### 2️⃣ Retrieval algorithm
+
 #### 2.1 Minimum blocking path plannig algorithm
 <p align="center">
 <img src="figure/MBP.png" width="65%">
@@ -53,8 +55,8 @@ We propose a **retrieval path planning and placement decision algorithm** aimed 
 ### 3️⃣ Placement algorithm
 
 #### 3.1 Simulated Greedy Placement
-- State composed of unscheduled blocks and transporters
-    - **edge attributed graph**: compact and effective representation of block transportation statue
+- Greedy placement algorithm based on retireval simulation
+    - **Placement candidate**: 
         - nodes representing location which contain current transporter information
         - edges representing blocks with origin and destination by disjunctive edge
     - **Crystal graph convolutional neural network**: graph neural network that suitable for encoding edge attributed graph
@@ -63,36 +65,27 @@ We propose a **retrieval path planning and placement decision algorithm** aimed 
 #### 3.2  Graph reinforcement learning
 
 ##### 3.2.1 State
-- State composed of unscheduled blocks and transporters
-    - **edge attributed graph**: compact and effective representation of block transportation statue
-        - nodes representing location which contain current transporter information
-        - edges representing blocks with origin and destination by disjunctive edge
-    - **Crystal graph convolutional neural network**: graph neural network that suitable for encoding edge attributed graph
+- State composed of current storage yard and incoming block
+    - **Storage yard**: Model the grid form into graph structure
+        - nodes representing cells with storaged block duration and weight
+        - edges representing the adjacent connection between each cell
+    - **Incoming block**: Feature containing of 
+    - **Cardinal Graph Neural Network**: Proposed graph network structure suited for grid form graph
 
 ##### 3.2.2 Action
-- a combination of the vessel and quay-wall (machine assignment and job sequencing)
-    - **candidate vessels**
-        - newly launched vessels from the docks
-        - vessels returning from sea trials
-        - vessels waiting at sea owing to the shortage of quay-walls
-        - vessels that need to be reallocated due to interruption
-    - **candidate quay walls**
-        - empty quay walls
-        - occupied quay walls with preemption allowed
+- Decide the placement location of incoming block
+    - **Policy computation**
+        - Encoded graph using graph neural network
+        - Compute each cell value with softmax normalization
 
 ##### 3.2.3 Reward
 - minimization of the total cost in the post-stage outfitting process
 - a sum of three cost-related rewards
     - **penalty cost**: the penalty cost for the delay in the delivery of vessels
-    - **moving cost**: the cost of moving the vessels
-    - **loss cost**: the additional processing cost
-
 <br>
 
 ##### 3.2.4 Network Structure
 <img src="figure/Placement network.png"/>
-
-
 - **Representation module**
     - Two types of latent representation are extracted from the heterogeneous graphs and auxiliary matrix, respectively
     - For heterogeneous graphs, the embedding vectors of nodes are generated using the relational information between nodes
@@ -102,7 +95,3 @@ We propose a **retrieval path planning and placement decision algorithm** aimed 
 - **Output module**
     - The actor layers calculate the probability distribution over actions $\pi_{\theta} (\cdot|s_t)$
     - The critic layers calculate a approximate state-value function $V_{\pi_{\theta}} (s_t)$, respectively
-
-#### 4.2 Reinforcement Learning Algorithm
-- **PPO(proximal policy optimization)**
-    - Policy-based reinforcement learning algorithm
