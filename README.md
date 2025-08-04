@@ -36,6 +36,8 @@ Dynamic programming based retrieval path plannig algorithm and graph reinforceme
 <img src="figure/Retrieval_process.png">
 
 <br>
+
+
 ### 2️⃣ Retrieval algorithm
 #### 2.1 Minimum blocking path plannig algorithm
 <p align="center">
