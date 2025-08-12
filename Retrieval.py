@@ -159,7 +159,7 @@ def search_path(result, grid):
     return path, rearrange_count
 
 # Calculate the amount of free area and obstacle area required along the retrieval path
-def cal_area(path, labeled_grid, label_num, input_dp, grid):
+def search_area(path, labeled_grid, label_num, input_dp, grid):
     dp = input_dp.copy()
     area_required = 0
     area_able = 0
@@ -187,8 +187,7 @@ def cal_area(path, labeled_grid, label_num, input_dp, grid):
                 path_label.append(labeled_grid[i[0], i[1]])
                 area_able += label_num[int(labeled_grid[i[0], i[1]])]
 
-    area_left = area_able - area_required
-    return area_able, area_required, area_left, dp, path_label, added_label
+    return path_label, added_label
 
 
 
@@ -200,8 +199,8 @@ def path_finder(grid, goal):
         return False, 0, 0, 0, 0, 0, 0, 0
 
     path, rearrange_count = search_path(dp, grid)
-    area_able, area_required, area_left, new_dp, path_label, added_label = cal_area(path, labeled_grid, label_num, dp, grid.copy())
-    return True, path, area_left, rearrange_count, path_label, added_label, labeled_grid, label_num
+    path_label, added_label = search_area(path, labeled_grid, label_num, dp, grid.copy())
+    return True, path, rearrange_count, path_label, added_label, labeled_grid, label_num
 
 # BFS from a cell to get connected area including obstacles and usable free space
 def bfs_area(final_grid, grid, start, path):
@@ -500,7 +499,7 @@ def Retrieval(grid, TP_capacity, target_block, ppo, step, grids, blocks, block_l
     input_grid = classify_grid(grid, TP_capacity, target_block)
 
     # Use path-finding to check if the target can be retrieved and get path info
-    ispossible, path, area_left, count, path_label, added_label, labeled_grid, label_num = path_finder(
+    ispossible, path, count, path_label, added_label, labeled_grid, label_num = path_finder(
         input_grid.copy(), target_block)
 
     if ispossible == False:
